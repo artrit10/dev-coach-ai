@@ -1,0 +1,23 @@
+{
+  "name": "devcoach-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=../.env src/server.ts",
+    "start": "tsx --env-file=../.env src/server.ts",
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "eval": "tsx --env-file=../.env evals/run.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.134.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "fastify": "^5.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "vitest": "^3.0.0"
+  }
+}
